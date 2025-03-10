@@ -2,59 +2,50 @@
 
 
 def reverse_string(s: str) -> str:
-    """
-    Return the input string in reverse order.
+    n=len (s)
+    L=[]
+    for i in rang(n):
+        L.append(s[n-1-i])
+    return str(L)
 
-    Args:
-        s: Input string
 
-    Returns:
-        The reversed string
-    """
     # TODO: Implement this function
     pass
 
-
+from collections import Counter
 def count_vowels(s: str) -> int:
-    """
-    Return the number of vowels (a, e, i, o, u) in the input string.
-    Case-insensitive: both uppercase and lowercase vowels should be counted.
-
-    Args:
-        s: Input string
-
-    Returns:
-        The number of vowels in the string
-    """
+    vowels= set("aeuioyAEUIOY")
+    counter= Counter(s)
+    return sum(counter[v] for v in counter.keys() & vowels)    
     # TODO: Implement this function
     pass
 
 
 def is_palindrome(s: str) -> bool:
-    """
-    Check if the input string is a palindrome.
-    A palindrome reads the same backward as forward.
-    Spaces and case should be ignored.
+    n=len(s)
+    L=[]
+    for i in range(n):
+        if not L[i]!=" ":
+            L.append(s[i])
+    for j in range(n):
+        if L[i]!=L[n-1-i]:
+            return False 
+        else:
+            return True 
 
-    Args:
-        s: Input string
-
-    Returns:
-        True if the string is a palindrome, False otherwise
-    """
     # TODO: Implement this function
     pass
 
 
 def capitalize_words(s: str) -> str:
-    """
-    Capitalize the first letter of each word in the input string.
-
-    Args:
-        s: Input string
-
-    Returns:
-        The input string with the first letter of each word capitalized
-    """
+    n=len(s)
+    L=[]
+    for i in range(n):
+        L.append(s[i])
+    for j in range(n):
+        if L[j]==" ":
+            L[j+1]= upper(L[j+1])
+    L[0]=upper(L[0])
+    return str(L)
     # TODO: Implement this function
     pass
