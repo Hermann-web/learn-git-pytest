@@ -17,6 +17,7 @@ def celsius_to_fahrenheit(celsius: Temperature) -> float:
     Returns:
         Temperature in Fahrenheit (rounded to 2 decimal places)
     """
+    return round(celsius * 9 / 5 + 32, 2)
     # TODO: Implement this function
     pass
 
@@ -33,6 +34,7 @@ def fahrenheit_to_celsius(fahrenheit: Temperature) -> float:
     Returns:
         Temperature in Celsius (rounded to 2 decimal places)
     """
+    return round((fahrenheit - 32) * 5 / 9, 2)
     # TODO: Implement this function
     pass
 
@@ -49,6 +51,7 @@ def celsius_to_kelvin(celsius: Temperature) -> float:
     Returns:
         Temperature in Kelvin (rounded to 2 decimal places)
     """
+    return round(celsius + 273.15, 2)
     # TODO: Implement this function
     pass
 
@@ -68,5 +71,8 @@ def kelvin_to_celsius(kelvin: Temperature) -> float:
     Raises:
         ValueError: If kelvin is less than 0 (below absolute zero)
     """
+    if kelvin < 0:
+        raise ValueError("Temperature below absolute zero!")
+    return round(kelvin - 273.15, 2)
     # TODO: Implement this function
     pass
